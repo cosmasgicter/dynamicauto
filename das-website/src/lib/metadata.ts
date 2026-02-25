@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const BASE_URL = 'https://das-auto.co.za';
+const BASE_URL = 'https://dynamicsolutionszambia.com';
 const SITE_NAME = 'Dynamic Automotive Solutions';
 const DEFAULT_OG_IMAGE = '/images/DAS  PROFILE-2025-images-1.jpg';
 

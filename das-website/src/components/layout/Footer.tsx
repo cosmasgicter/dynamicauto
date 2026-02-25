@@ -3,9 +3,9 @@ import { NAV_LINKS, IMAGE_ASSETS } from "@/lib/constants";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
 
 const CONTACT_INFO = {
-  phone: "+27 11 123 4567",
-  email: "info@das-auto.co.za",
-  address: "123 Main Road, Johannesburg, South Africa",
+  phone: "+260 977 123 456",
+  email: "info@dynamicsolutionszambia.com",
+  address: "Plot 1234, Great East Road, Lusaka, Zambia",
   hours: [
     "Mon-Fri: 7:30 AM - 5:00 PM",
     "Sat: 8:00 AM - 1:00 PM",
@@ -13,9 +13,9 @@ const CONTACT_INFO = {
 };
 
 const SOCIAL_LINKS = [
-  { label: "Facebook", href: "https://facebook.com/das-auto", icon: "facebook" },
-  { label: "Instagram", href: "https://instagram.com/das-auto", icon: "instagram" },
-  { label: "LinkedIn", href: "https://linkedin.com/company/das-auto", icon: "linkedin" },
+  { label: "Facebook", href: "https://facebook.com/dynamicsolutionszambia", icon: "facebook" },
+  { label: "Instagram", href: "https://instagram.com/dynamicsolutionszambia", icon: "instagram" },
+  { label: "LinkedIn", href: "https://linkedin.com/company/dynamicsolutionszambia", icon: "linkedin" },
 ] as const;
 
 function FacebookIcon() {
@@ -61,12 +61,11 @@ export default function Footer() {
               <ImageWithFallback
                 src={IMAGE_ASSETS.logo}
                 alt="DAS - Dynamic Automotive Solutions"
-                width={48}
+                width={120}
                 height={48}
-                className="h-10 w-10 rounded-full object-cover"
-                sizes="48px"
+                className="h-10 w-auto object-contain"
+                sizes="120px"
               />
-              <span className="text-lg font-bold">DAS</span>
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-white/70">
               Dynamic Automotive Solutions — 75+ years of cumulative automotive

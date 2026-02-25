@@ -31,15 +31,12 @@ export default function HeaderClient() {
           <ImageWithFallback
             src={IMAGE_ASSETS.logo}
             alt="DAS - Dynamic Automotive Solutions"
-            width={48}
+            width={120}
             height={48}
-            className="h-10 w-10 rounded-full object-cover tablet:h-12 tablet:w-12"
-            sizes="48px"
+            className="h-10 w-auto object-contain tablet:h-12"
+            sizes="120px"
             priority
           />
-          <span className="text-lg font-bold text-white tablet:text-xl">
-            DAS
-          </span>
         </Link>
 
         {/* Desktop nav links */}

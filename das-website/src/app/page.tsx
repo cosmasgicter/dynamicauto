@@ -11,7 +11,7 @@ import { IMAGE_ASSETS } from "@/lib/constants";
 export const metadata = generatePageMetadata({
   title: "Home",
   description:
-    "Dynamic Automotive Solutions — 75+ years of cumulative automotive expertise. Professional mechanical repairs, auto electrical, diagnostics, fleet management, and more in Johannesburg.",
+    "Dynamic Automotive Solutions — 75+ years of cumulative automotive expertise. Professional mechanical repairs, auto electrical, diagnostics, fleet management, and more in Lusaka, Zambia.",
   ogImage: IMAGE_ASSETS.heroBackground,
   path: "/",
 });

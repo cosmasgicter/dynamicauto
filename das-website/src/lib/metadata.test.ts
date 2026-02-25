@@ -29,7 +29,7 @@ describe('generatePageMetadata', () => {
     const og = meta.openGraph as Record<string, unknown>;
     expect(og.title).toBe('Services | DAS');
     expect(og.description).toBe('Our services');
-    expect(og.url).toBe('https://das-auto.co.za/services');
+    expect(og.url).toBe('https://dynamicsolutionszambia.com/services');
   });
 
   it('uses default OG image when none provided', () => {
@@ -40,7 +40,7 @@ describe('generatePageMetadata', () => {
     });
     const og = meta.openGraph as Record<string, unknown>;
     const images = og.images as Array<{ url: string }>;
-    expect(images[0].url).toContain('das-auto.co.za');
+    expect(images[0].url).toContain('dynamicsolutionszambia.com');
     expect(images[0].url).toContain('DAS');
   });
 
@@ -53,7 +53,7 @@ describe('generatePageMetadata', () => {
     });
     const og = meta.openGraph as Record<string, unknown>;
     const images = og.images as Array<{ url: string }>;
-    expect(images[0].url).toBe('https://das-auto.co.za/images/fleet.jpg');
+    expect(images[0].url).toBe('https://dynamicsolutionszambia.com/images/fleet.jpg');
   });
 
   it('passes through absolute OG image URLs unchanged', () => {
@@ -87,6 +87,6 @@ describe('generatePageMetadata', () => {
       path: '/about',
     });
     const alternates = meta.alternates as Record<string, unknown>;
-    expect(alternates.canonical).toBe('https://das-auto.co.za/about');
+    expect(alternates.canonical).toBe('https://dynamicsolutionszambia.com/about');
   });
 });

@@ -14,10 +14,10 @@ export default function ContactInfo() {
           <div>
             <p className="text-sm font-semibold text-das-gray-700">Phone</p>
             <a
-              href="tel:+27111234567"
+              href="tel:+260977123456"
               className="text-das-navy font-medium transition-colors hover:text-das-accent"
             >
-              +27 11 123 4567
+              +260 977 123 456
             </a>
           </div>
         </div>
@@ -32,10 +32,10 @@ export default function ContactInfo() {
           <div>
             <p className="text-sm font-semibold text-das-gray-700">Email</p>
             <a
-              href="mailto:info@das-auto.co.za"
+              href="mailto:info@dynamicsolutionszambia.com"
               className="text-das-navy font-medium transition-colors hover:text-das-accent"
             >
-              info@das-auto.co.za
+              info@dynamicsolutionszambia.com
             </a>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function ContactInfo() {
           <div>
             <p className="text-sm font-semibold text-das-gray-700">Address</p>
             <p className="text-das-navy font-medium">
-              123 Main Road, Johannesburg, South Africa
+              Plot 1234, Great East Road, Lusaka, Zambia
             </p>
           </div>
         </div>

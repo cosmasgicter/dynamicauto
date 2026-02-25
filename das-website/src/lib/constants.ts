@@ -24,6 +24,22 @@ export interface TeamMember {
 }
 
 // Image asset mapping — logical names to public file paths
+// Images extracted from DAS PROFILE-2025 company brochure:
+// 1: Company logo/branding
+// 2: Workshop/vehicle servicing shot
+// 3: Workshop wide shot (hero)
+// 4: Team/company group photo (about banner)
+// 5: Mechanical repairs — engine work
+// 6: Auto electrical — wiring/diagnostics
+// 7: Diagnostic equipment in use
+// 8: Fleet of vehicles
+// 9: Air conditioning service
+// 10: Brake system work
+// 11-13: Individual team member portraits
+// 14: Services overview banner
+// 15: Contact/reception area
+// 16: Fleet vehicles lineup
+// 17-20: Gallery/workshop action shots
 
 export const IMAGE_ASSETS: Record<string, string> = {
   logo: '/images/DAS  PROFILE-2025-images-1.jpg',

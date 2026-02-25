@@ -21,15 +21,15 @@ describe('generateLocalBusinessSchema', () => {
   });
 
   it('includes contact details', () => {
-    expect(schema.telephone).toBe('+27111234567');
-    expect(schema.email).toBe('info@das-auto.co.za');
+    expect(schema.telephone).toBe('+260977123456');
+    expect(schema.email).toBe('info@dynamicsolutionszambia.com');
   });
 
-  it('includes PostalAddress with South African details', () => {
+  it('includes PostalAddress with Zambian details', () => {
     expect(schema.address['@type']).toBe('PostalAddress');
-    expect(schema.address.addressLocality).toBe('Johannesburg');
-    expect(schema.address.addressRegion).toBe('Gauteng');
-    expect(schema.address.addressCountry).toBe('ZA');
+    expect(schema.address.addressLocality).toBe('Lusaka');
+    expect(schema.address.addressRegion).toBe('Lusaka Province');
+    expect(schema.address.addressCountry).toBe('ZM');
   });
 
   it('includes opening hours for weekdays and Saturday', () => {
@@ -38,7 +38,7 @@ describe('generateLocalBusinessSchema', () => {
   });
 
   it('includes image and url', () => {
-    expect(schema.image).toContain('das-auto.co.za');
-    expect(schema.url).toBe('https://das-auto.co.za');
+    expect(schema.image).toContain('dynamicsolutionszambia.com');
+    expect(schema.url).toBe('https://dynamicsolutionszambia.com');
   });
 });

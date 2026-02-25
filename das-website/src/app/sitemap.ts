@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://das-auto.co.za';
+const BASE_URL = 'https://dynamicsolutionszambia.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
