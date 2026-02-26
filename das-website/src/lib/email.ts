@@ -24,7 +24,7 @@ export async function sendContactEmail(data: ContactEmailData): Promise<void> {
   // Email to DAS (notification of new inquiry)
   await transporter.sendMail({
     from: `"DAS Website" <${process.env.ZOHO_EMAIL}>`,
-    to: process.env.ZOHO_EMAIL,
+    to: process.env.CONTACT_RECIPIENT || process.env.ZOHO_EMAIL,
     replyTo: email,
     subject: `New Inquiry: ${serviceInterest} — from ${name}`,
     html: `

@@ -42,7 +42,7 @@ export default function HeaderClient() {
               alt="DAS - Dynamic Automotive Solutions"
               width={120}
               height={66}
-              className="h-11 w-auto object-contain brightness-0 invert tablet:h-14"
+              className="h-11 w-auto object-contain tablet:h-14"
               sizes="120px"
               priority
             />

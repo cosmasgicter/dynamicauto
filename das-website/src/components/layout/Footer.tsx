@@ -63,7 +63,7 @@ export default function Footer() {
                 alt="DAS - Dynamic Automotive Solutions"
                 width={120}
                 height={66}
-                className="h-11 w-auto object-contain brightness-0 invert"
+                className="h-11 w-auto object-contain"
                 sizes="120px"
               />
             </Link>
@@ -154,6 +154,17 @@ export default function Footer() {
         <div className="mx-auto max-w-7xl px-4 py-4 tablet:px-6">
           <p className="text-center text-xs text-white/50">
             &copy; {currentYear} Dynamic Automotive Solutions. All rights reserved.
+          </p>
+          <p className="mt-1 text-center text-xs text-white/40">
+            Developed by{" "}
+            <a
+              href="https://beanola.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 transition-colors hover:text-white"
+            >
+              Beanola Technologies
+            </a>
           </p>
         </div>
       </div>
