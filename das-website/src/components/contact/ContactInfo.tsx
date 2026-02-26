@@ -14,10 +14,24 @@ export default function ContactInfo() {
           <div>
             <p className="text-sm font-semibold text-das-gray-700">Phone</p>
             <a
-              href="tel:+260977123456"
+              href="tel:+260979449309"
               className="text-das-navy font-medium transition-colors hover:text-das-accent"
             >
-              +260 977 123 456
+              +260 979 449 309
+            </a>
+            <br />
+            <a
+              href="tel:+260970630518"
+              className="text-sm text-das-gray-600 transition-colors hover:text-das-accent"
+            >
+              +260 970 630 518
+            </a>
+            <br />
+            <a
+              href="tel:+260776955995"
+              className="text-sm text-das-gray-600 transition-colors hover:text-das-accent"
+            >
+              +260 776 955 995
             </a>
           </div>
         </div>
@@ -51,7 +65,7 @@ export default function ContactInfo() {
           <div>
             <p className="text-sm font-semibold text-das-gray-700">Address</p>
             <p className="text-das-navy font-medium">
-              Plot 1234, Great East Road, Lusaka, Zambia
+              Total Filling Station, Alick Nkata Road, Lusaka, Zambia
             </p>
           </div>
         </div>

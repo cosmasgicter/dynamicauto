@@ -22,8 +22,8 @@ export default function HeaderClient() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-das-navy shadow-lg" : "bg-das-navy/90"
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-lg" : "bg-white"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 tablet:px-6">
@@ -42,7 +42,7 @@ export default function HeaderClient() {
               alt="DAS - Dynamic Automotive Solutions"
               width={180}
               height={72}
-              className="h-12 w-auto object-contain tablet:h-14 desktop:h-16 drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]"
+              className="h-12 w-auto object-contain tablet:h-14 desktop:h-16"
               sizes="180px"
               priority
             />
@@ -60,7 +60,7 @@ export default function HeaderClient() {
             >
               <Link
                 href={link.href}
-                className="text-sm font-medium text-white/80 transition-colors hover:text-white"
+                className="text-sm font-medium text-das-navy/70 transition-colors hover:text-das-navy"
               >
                 {link.label}
               </Link>
@@ -71,7 +71,7 @@ export default function HeaderClient() {
         {/* Mobile hamburger button */}
         <button
           type="button"
-          className="flex items-center justify-center rounded-md p-2 text-white tablet:hidden"
+          className="flex items-center justify-center rounded-md p-2 text-das-navy tablet:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}

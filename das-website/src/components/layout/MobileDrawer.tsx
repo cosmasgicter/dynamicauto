@@ -83,7 +83,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation"
-        className={`fixed top-0 right-0 z-50 h-full w-72 bg-das-navy transition-transform duration-300 ${
+        className={`fixed top-0 right-0 z-50 h-full w-72 bg-white shadow-xl transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -94,7 +94,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             type="button"
             onClick={onClose}
             aria-label="Close menu"
-            className="rounded-md p-2 text-white transition-colors hover:text-white/80"
+            className="rounded-md p-2 text-das-navy transition-colors hover:text-das-navy/70"
           >
             <svg
               className="h-6 w-6"
@@ -121,7 +121,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                 <Link
                   href={link.href}
                   onClick={onClose}
-                  className="block rounded-md px-3 py-3 text-base font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                  className="block rounded-md px-3 py-3 text-base font-medium text-das-navy/70 transition-colors hover:bg-das-navy/5 hover:text-das-navy"
                 >
                   {link.label}
                 </Link>

@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from 'react';
 
 const MAP_EMBED_URL =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.5!2d28.2833!3d-15.4167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDI1JzAwLjEiUyAyOMKwMTcnMDAuMCJF!5e0!3m2!1sen!2szm!4v1700000000000';
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.2!2d28.305!3d-15.3975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDIzJzUxLjAiUyAyOMKwMTgnMTguMCJF!5e0!3m2!1sen!2szm!4v1700000000000';
 
 export default function MapEmbed() {
   const containerRef = useRef<HTMLDivElement>(null);

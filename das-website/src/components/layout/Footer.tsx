@@ -3,9 +3,9 @@ import { NAV_LINKS, IMAGE_ASSETS } from "@/lib/constants";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
 
 const CONTACT_INFO = {
-  phone: "+260 977 123 456",
+  phone: "+260 979 449 309",
   email: "dynamic@dynamicsolutionszambia.com",
-  address: "Plot 1234, Great East Road, Lusaka, Zambia",
+  address: "Total Filling Station, Alick Nkata Road, Lusaka, Zambia",
   hours: [
     "Mon-Fri: 7:30 AM - 5:00 PM",
     "Sat: 8:00 AM - 1:00 PM",

@@ -55,11 +55,11 @@ export async function sendContactEmail(data: ContactEmailData): Promise<void> {
       <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
         <h2 style="color:#1a2332">Thank You, ${name}!</h2>
         <p>We've received your inquiry about <strong>${serviceInterest}</strong> and will get back to you within 24 hours.</p>
-        <p>If you need immediate assistance, please call us at <a href="tel:+260977123456">+260 977 123 456</a>.</p>
+        <p>If you need immediate assistance, please call us at <a href="tel:+260979449309">+260 979 449 309</a>.</p>
         <hr style="border:none;border-top:1px solid #e9ecef;margin:24px 0" />
         <p style="color:#868e96;font-size:13px">
           Dynamic Automotive Solutions<br/>
-          Plot 1234, Great East Road, Lusaka, Zambia<br/>
+          Total Filling Station, Alick Nkata Road, Lusaka, Zambia<br/>
           <a href="https://dynamicsolutionszambia.com">dynamicsolutionszambia.com</a>
         </p>
       </div>

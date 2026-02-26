@@ -21,7 +21,7 @@ describe('generateLocalBusinessSchema', () => {
   });
 
   it('includes contact details', () => {
-    expect(schema.telephone).toBe('+260977123456');
+    expect(schema.telephone).toBe('+260979449309');
     expect(schema.email).toBe('dynamic@dynamicsolutionszambia.com');
   });
 

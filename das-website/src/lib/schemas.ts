@@ -5,11 +5,11 @@ export function generateLocalBusinessSchema() {
     name: 'Dynamic Automotive Solutions',
     description:
       '75+ years of cumulative automotive expertise providing mechanical repairs, auto electrical, diagnostics, air conditioning, fleet management, vehicle servicing, and brake systems.',
-    telephone: '+260977123456',
+    telephone: '+260979449309',
     email: 'dynamic@dynamicsolutionszambia.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Plot 1234, Great East Road',
+      streetAddress: 'Total Filling Station, Alick Nkata Road',
       addressLocality: 'Lusaka',
       addressRegion: 'Lusaka Province',
       postalCode: '10101',
