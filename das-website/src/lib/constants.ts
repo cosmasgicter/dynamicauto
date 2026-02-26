@@ -204,7 +204,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: 'team-member-1',
     name: 'Jermaine Nathanson',
     role: 'Aftersales Manager',
-    image: IMAGE_ASSETS.teamPhoto1,
+    image: IMAGE_ASSETS.teamPhoto3,
     bio: 'Jermaine remains dedicated and is an asset to the company. He works well with every person he comes into contact with and takes your personal needs seriously.',
   },
   {
@@ -218,7 +218,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: 'team-member-3',
     name: 'Michael Katebe',
     role: 'Workshop Foreman',
-    image: IMAGE_ASSETS.teamPhoto3,
+    image: IMAGE_ASSETS.teamPhoto1,
     bio: 'Michael leads our team of technicians on the workshop floor, bringing hands-on expertise and attention to detail to every repair and service job.',
   },
   {
