@@ -24,44 +24,49 @@ export interface TeamMember {
 }
 
 // Image asset mapping — logical names to public file paths
-// Images extracted from DAS PROFILE-2025 company brochure:
-// 1: Company logo/branding
-// 2: Workshop/vehicle servicing shot
-// 3: Workshop wide shot (hero)
-// 4: Team/company group photo (about banner)
-// 5: Mechanical repairs — engine work
-// 6: Auto electrical — wiring/diagnostics
-// 7: Diagnostic equipment in use
-// 8: Fleet of vehicles
-// 9: Air conditioning service
-// 10: Brake system work
-// 11-13: Individual team member portraits
-// 14: Services overview banner
-// 15: Contact/reception area
-// 16: Fleet vehicles lineup
-// 17-20: Gallery/workshop action shots
+// Images extracted from DAS PROFILE-2025 company brochure (analyzed via Python/Pillow):
+// 1: (1008x633) Company branding/logo page — landscape, mixed colors
+// 2: (470x259) Workshop overview — landscape, grey/metallic
+// 3: (1202x481) Workshop wide panoramic — warm/red tones, dark → HERO
+// 4: (1003x765) Group photo with people — warm, skin tones → ABOUT BANNER
+// 5: (587x375) Blue-dominant metallic equipment → AUTO ELECTRICAL
+// 6: (1653x955) High-res workshop with people → MECHANICAL REPAIRS
+// 7: (588x448) Person working on vehicle → VEHICLE SERVICING
+// 8: (1653x986) High-res vehicles/fleet scene → FLEET MANAGEMENT
+// 9: (1653x942) High-res workshop equipment, cool+warm → DIAGNOSTICS
+// 10: (157x99) Tiny/blank — not usable
+// 11: (470x285) Grey/metallic landscape — services overview graphic
+// 12: (224x224) Small grey square — placeholder
+// 13: (395x408) Square portrait, skin tones → TEAM MEMBER 1
+// 14: (398x410) Square portrait, warm → TEAM MEMBER 2
+// 15: (386x399) Square portrait, strong skin tones → TEAM MEMBER 3
+// 16: (386x399) Square portrait, skin tones → TEAM MEMBER 4 / additional
+// 17: (1022x852) Large dark workshop scene → BRAKES / engine bay work
+// 18: (52x28) Tiny/blank — not usable
+// 19: (51x26) Tiny/blank — not usable
+// 20: (224x224) Small grey square — placeholder
 
 export const IMAGE_ASSETS: Record<string, string> = {
   logo: '/images/DAS__PROFILE-2025-images-2.png',
-  vehicleServicing: '/images/DAS  PROFILE-2025-images-2.jpg',
+  vehicleServicing: '/images/DAS  PROFILE-2025-images-7.jpg',
   heroBackground: '/images/DAS  PROFILE-2025-images-3.jpg',
   aboutBanner: '/images/DAS  PROFILE-2025-images-4.jpg',
-  mechanicalRepairs: '/images/DAS  PROFILE-2025-images-5.jpg',
-  autoElectrical: '/images/DAS  PROFILE-2025-images-6.jpg',
-  diagnostics: '/images/DAS  PROFILE-2025-images-7.jpg',
+  mechanicalRepairs: '/images/DAS  PROFILE-2025-images-6.jpg',
+  autoElectrical: '/images/DAS  PROFILE-2025-images-5.jpg',
+  diagnostics: '/images/DAS  PROFILE-2025-images-9.jpg',
   fleetManagement: '/images/DAS  PROFILE-2025-images-8.jpg',
-  airConditioning: '/images/DAS  PROFILE-2025-images-9.jpg',
-  brakes: '/images/DAS  PROFILE-2025-images-10.jpg',
-  teamPhoto1: '/images/DAS  PROFILE-2025-images-11.jpg',
-  teamPhoto2: '/images/DAS  PROFILE-2025-images-12.jpg',
-  teamPhoto3: '/images/DAS  PROFILE-2025-images-13.jpg',
-  servicesBanner: '/images/DAS  PROFILE-2025-images-14.jpg',
-  contactBanner: '/images/DAS  PROFILE-2025-images-15.jpg',
-  fleetBanner: '/images/DAS  PROFILE-2025-images-16.jpg',
-  gallery1: '/images/DAS  PROFILE-2025-images-17.jpg',
-  gallery2: '/images/DAS  PROFILE-2025-images-18.jpg',
-  gallery3: '/images/DAS  PROFILE-2025-images-19.jpg',
-  gallery4: '/images/DAS  PROFILE-2025-images-20.jpg',
+  airConditioning: '/images/DAS  PROFILE-2025-images-2.jpg',
+  brakes: '/images/DAS  PROFILE-2025-images-17.jpg',
+  teamPhoto1: '/images/DAS  PROFILE-2025-images-13.jpg',
+  teamPhoto2: '/images/DAS  PROFILE-2025-images-14.jpg',
+  teamPhoto3: '/images/DAS  PROFILE-2025-images-15.jpg',
+  servicesBanner: '/images/DAS  PROFILE-2025-images-1.jpg',
+  contactBanner: '/images/DAS  PROFILE-2025-images-4.jpg',
+  fleetBanner: '/images/DAS  PROFILE-2025-images-8.jpg',
+  gallery1: '/images/DAS  PROFILE-2025-images-6.jpg',
+  gallery2: '/images/DAS  PROFILE-2025-images-9.jpg',
+  gallery3: '/images/DAS  PROFILE-2025-images-17.jpg',
+  gallery4: '/images/DAS  PROFILE-2025-images-7.jpg',
 };
 
 // Navigation links
