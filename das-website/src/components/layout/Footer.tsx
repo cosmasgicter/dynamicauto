@@ -61,10 +61,10 @@ export default function Footer() {
               <ImageWithFallback
                 src={IMAGE_ASSETS.logo}
                 alt="DAS - Dynamic Automotive Solutions"
-                width={120}
-                height={66}
-                className="h-11 w-auto object-contain"
-                sizes="120px"
+                width={160}
+                height={64}
+                className="h-12 w-auto object-contain drop-shadow-[0_0_6px_rgba(255,255,255,0.1)]"
+                sizes="160px"
               />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-white/70">

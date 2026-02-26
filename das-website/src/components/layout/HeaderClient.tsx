@@ -40,10 +40,10 @@ export default function HeaderClient() {
             <ImageWithFallback
               src={IMAGE_ASSETS.logo}
               alt="DAS - Dynamic Automotive Solutions"
-              width={120}
-              height={66}
-              className="h-11 w-auto object-contain tablet:h-14"
-              sizes="120px"
+              width={180}
+              height={72}
+              className="h-12 w-auto object-contain tablet:h-14 desktop:h-16 drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]"
+              sizes="180px"
               priority
             />
           </motion.div>

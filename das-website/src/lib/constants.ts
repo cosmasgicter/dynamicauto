@@ -42,7 +42,7 @@ export interface TeamMember {
 // 17-20: Gallery/workshop action shots
 
 export const IMAGE_ASSETS: Record<string, string> = {
-  logo: '/images/DAS  PROFILE-2025-images-2.jpg',
+  logo: '/images/DAS__PROFILE-2025-images-2.png',
   vehicleServicing: '/images/DAS  PROFILE-2025-images-2.jpg',
   heroBackground: '/images/DAS  PROFILE-2025-images-3.jpg',
   aboutBanner: '/images/DAS  PROFILE-2025-images-4.jpg',
