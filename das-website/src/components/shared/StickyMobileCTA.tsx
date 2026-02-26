@@ -27,66 +27,39 @@ export default function StickyMobileCTA() {
       {visible && (
         <motion.div
           className="fixed bottom-5 right-5 z-40 tablet:hidden"
-          initial={{ scale: 0, opacity: 0, y: 40 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          exit={{ scale: 0, opacity: 0, y: 40 }}
-          transition={{ type: "spring", stiffness: 260, damping: 20 }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0, opacity: 0 }}
+          transition={{ type: "spring", stiffness: 300, damping: 22 }}
         >
-          {/* Pulsing ring effect */}
-          <motion.span
-            className="absolute inset-0 rounded-full bg-das-accent/40"
-            animate={{
-              scale: [1, 1.5, 1.8],
-              opacity: [0.5, 0.2, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeOut",
-            }}
-          />
-          {/* Second pulse ring (offset timing) */}
-          <motion.span
-            className="absolute inset-0 rounded-full bg-das-accent/30"
-            animate={{
-              scale: [1, 1.3, 1.6],
-              opacity: [0.4, 0.15, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeOut",
-              delay: 0.8,
-            }}
-          />
+          {/* Gentle breathing glow ring — CSS only, no flicker */}
+          <span className="absolute inset-0 -m-1 animate-[ping_2.5s_ease-in-out_infinite] rounded-full bg-das-accent/25" />
 
-          {/* Main button with bounce + glow */}
+          {/* Subtle soft bounce on the button */}
           <motion.div
-            animate={{
-              y: [0, -6, 0],
-            }}
+            animate={{ y: [0, -4, 0] }}
             transition={{
-              duration: 2.5,
+              duration: 3,
               repeat: Infinity,
               ease: "easeInOut",
             }}
           >
             <Link
               href="/contact"
-              className="relative flex items-center gap-2 rounded-full bg-das-accent px-5 py-3 text-sm font-bold text-white shadow-[0_0_20px_rgba(230,57,70,0.5)] transition-all hover:bg-das-accent-dark hover:shadow-[0_0_30px_rgba(230,57,70,0.7)] hover:scale-110 active:scale-95"
+              className="relative flex items-center gap-2 rounded-full bg-das-accent px-5 py-3 text-sm font-bold text-white shadow-lg shadow-das-accent/30 transition-all hover:bg-das-accent-dark hover:shadow-xl hover:scale-105 active:scale-95"
             >
-              {/* Animated phone icon */}
+              {/* Phone icon with gentle wiggle every few seconds */}
               <motion.svg
                 className="h-4 w-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 strokeWidth={2.5}
-                animate={{ rotate: [0, -15, 15, -10, 10, 0] }}
+                animate={{ rotate: [0, -10, 10, -5, 0] }}
                 transition={{
-                  duration: 1.5,
+                  duration: 0.6,
                   repeat: Infinity,
-                  repeatDelay: 3,
+                  repeatDelay: 4,
                   ease: "easeInOut",
                 }}
               >
