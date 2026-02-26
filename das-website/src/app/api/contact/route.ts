@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { validateForm, type ContactFormData } from '@/lib/validation';
+import { sendContactEmail } from '@/lib/email';
 
 export async function POST(request: Request) {
   try {
@@ -22,8 +23,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // Simulate processing (no real email sending)
-    console.log('API contact form submission:', data);
+    await sendContactEmail(data);
 
     return NextResponse.json(
       { status: 'success', errors: {}, message: 'Thank you for contacting DAS! We will get back to you within 24 hours.' },

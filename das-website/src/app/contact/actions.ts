@@ -1,6 +1,7 @@
 'use server';
 
 import { validateForm, type ContactFormData } from '@/lib/validation';
+import { sendContactEmail } from '@/lib/email';
 
 export interface ContactFormState {
   status: 'idle' | 'submitting' | 'success' | 'error';
@@ -31,8 +32,7 @@ export async function submitContactForm(
       };
     }
 
-    // Simulate processing (no real email sending)
-    console.log('Contact form submission:', data);
+    await sendContactEmail(data);
 
     return {
       status: 'success',

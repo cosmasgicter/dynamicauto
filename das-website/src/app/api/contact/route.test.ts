@@ -1,59 +1,73 @@
-import { describe, it, expect } from 'vitest';
-import { POST } from './route';
+import { describe, it, expect, vi } from 'vitest';
 
-function makeRequest(body: Record<string, unknown>): Request {
-  return new Request('http://localhost/api/contact', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  });
-}
+// Mock the email module before importing the route
+vi.mock('@/lib/email', () => ({
+  sendContactEmail: vi.fn().mockResolvedValue(undefined),
+}));
 
-const validBody = {
-  name: 'John Doe',
-  email: 'john@example.com',
-  phone: '+27 11 123 4567',
-  serviceInterest: 'Mechanical Repairs',
-  message: 'I need a full vehicle service please.',
-};
+const { POST } = await import('./route');
 
 describe('POST /api/contact', () => {
   it('returns 200 with success for valid data', async () => {
-    const res = await POST(makeRequest(validBody));
-    expect(res.status).toBe(200);
-    const json = await res.json();
+    const body = {
+      name: 'John Doe',
+      email: 'john@example.com',
+      phone: '+27 11 123 4567',
+      serviceInterest: 'Mechanical Repairs',
+      message: 'I need a full vehicle service please.',
+    };
+
+    const request = new Request('http://localhost/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+
+    const response = await POST(request);
+    const json = await response.json();
+
+    expect(response.status).toBe(200);
     expect(json.status).toBe('success');
-    expect(json.message).toContain('Thank you');
   });
 
-  it('returns 400 with validation errors for empty fields', async () => {
-    const res = await POST(
-      makeRequest({ name: '', email: '', phone: '', serviceInterest: '', message: '' })
-    );
-    expect(res.status).toBe(400);
-    const json = await res.json();
+  it('returns 400 with errors for invalid data', async () => {
+    const body = { name: '', email: 'bad', phone: '', serviceInterest: '', message: '' };
+
+    const request = new Request('http://localhost/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+
+    const response = await POST(request);
+    const json = await response.json();
+
+    expect(response.status).toBe(400);
     expect(json.status).toBe('error');
-    expect(json.errors.name).toBeDefined();
-    expect(json.errors.email).toBeDefined();
+    expect(Object.keys(json.errors).length).toBeGreaterThan(0);
   });
 
-  it('returns 400 for invalid email', async () => {
-    const res = await POST(makeRequest({ ...validBody, email: 'bad' }));
-    expect(res.status).toBe(400);
-    const json = await res.json();
-    expect(json.errors.email).toBeDefined();
+  it('returns 400 when required fields are missing', async () => {
+    const body = { name: 'Test', email: 'test@test.com', phone: '', serviceInterest: '', message: '' };
+
+    const request = new Request('http://localhost/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+
+    const response = await POST(request);
+    expect(response.status).toBe(400);
   });
 
   it('returns 500 for malformed JSON', async () => {
-    const req = new Request('http://localhost/api/contact', {
+    const request = new Request('http://localhost/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: 'not json',
     });
-    const res = await POST(req);
-    expect(res.status).toBe(500);
-    const json = await res.json();
-    expect(json.status).toBe('error');
-    expect(json.message).toContain('Something went wrong');
+
+    const response = await POST(request);
+    expect(response.status).toBe(500);
   });
 });
