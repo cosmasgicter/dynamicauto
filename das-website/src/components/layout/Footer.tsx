@@ -62,8 +62,8 @@ export default function Footer() {
                 src={IMAGE_ASSETS.logo}
                 alt="DAS - Dynamic Automotive Solutions"
                 width={120}
-                height={48}
-                className="h-10 w-auto object-contain"
+                height={66}
+                className="h-11 w-auto object-contain brightness-0 invert"
                 sizes="120px"
               />
             </Link>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { NAV_LINKS, IMAGE_ASSETS } from "@/lib/constants";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
 import MobileDrawer from "@/components/layout/MobileDrawer";
@@ -26,30 +27,44 @@ export default function HeaderClient() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 tablet:px-6">
-        {/* Logo */}
+        {/* Animated Logo */}
         <Link href="/" className="flex shrink-0 items-center gap-2">
-          <ImageWithFallback
-            src={IMAGE_ASSETS.logo}
-            alt="DAS - Dynamic Automotive Solutions"
-            width={120}
-            height={48}
-            className="h-10 w-auto object-contain tablet:h-12"
-            sizes="120px"
-            priority
-          />
+          <motion.div
+            initial={{ opacity: 0, x: -20, scale: 0.8 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="relative"
+          >
+            <ImageWithFallback
+              src={IMAGE_ASSETS.logo}
+              alt="DAS - Dynamic Automotive Solutions"
+              width={120}
+              height={66}
+              className="h-11 w-auto object-contain brightness-0 invert tablet:h-14"
+              sizes="120px"
+              priority
+            />
+          </motion.div>
         </Link>
 
         {/* Desktop nav links */}
         <ul className="hidden items-center gap-6 tablet:flex">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
+          {NAV_LINKS.map((link, i) => (
+            <motion.li
+              key={link.href}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 + i * 0.05 }}
+            >
               <Link
                 href={link.href}
                 className="text-sm font-medium text-white/80 transition-colors hover:text-white"
               >
                 {link.label}
               </Link>
-            </li>
+            </motion.li>
           ))}
         </ul>
 
