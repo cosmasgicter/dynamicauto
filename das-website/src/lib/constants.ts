@@ -48,26 +48,31 @@ export interface TeamMember {
 
 export const IMAGE_ASSETS: Record<string, string> = {
   logo: '/images/DAS__PROFILE-2025-images-2.png',
-  vehicleServicing: '/images/DAS  PROFILE-2025-images-7.jpg',
+  // Page 3 images (Fleet Maintenance + Vehicle Service)
+  vehicleServicing: '/images/DAS  PROFILE-2025-images-6.jpg',
+  fleetManagement: '/images/DAS  PROFILE-2025-images-5.jpg',
+  // Page 4 images (Mechanical Repairs, Auto Electrical, etc.)
+  mechanicalRepairs: '/images/DAS  PROFILE-2025-images-8.jpg',
+  autoElectrical: '/images/DAS  PROFILE-2025-images-7.jpg',
+  // Page 1/2 images (company overview, workshop)
   heroBackground: '/images/DAS  PROFILE-2025-images-3.jpg',
   aboutBanner: '/images/DAS  PROFILE-2025-images-4.jpg',
-  mechanicalRepairs: '/images/DAS  PROFILE-2025-images-6.jpg',
-  autoElectrical: '/images/DAS  PROFILE-2025-images-5.jpg',
   diagnostics: '/images/DAS  PROFILE-2025-images-9.jpg',
-  fleetManagement: '/images/DAS  PROFILE-2025-images-8.jpg',
-  airConditioning: '/images/DAS  PROFILE-2025-images-2.jpg',
-  brakes: '/images/DAS  PROFILE-2025-images-17.jpg',
+  airConditioning: '/images/DAS  PROFILE-2025-images-17.jpg',
+  brakes: '/images/DAS  PROFILE-2025-images-2.jpg',
+  // Team portraits (Page 6-7)
   teamPhoto1: '/images/DAS  PROFILE-2025-images-13.jpg',
   teamPhoto2: '/images/DAS  PROFILE-2025-images-14.jpg',
   teamPhoto3: '/images/DAS  PROFILE-2025-images-15.jpg',
   teamPhoto4: '/images/DAS  PROFILE-2025-images-16.jpg',
+  // Banners and gallery
   servicesBanner: '/images/DAS  PROFILE-2025-images-1.jpg',
   contactBanner: '/images/DAS  PROFILE-2025-images-4.jpg',
-  fleetBanner: '/images/DAS  PROFILE-2025-images-8.jpg',
+  fleetBanner: '/images/DAS  PROFILE-2025-images-5.jpg',
   gallery1: '/images/DAS  PROFILE-2025-images-6.jpg',
   gallery2: '/images/DAS  PROFILE-2025-images-9.jpg',
   gallery3: '/images/DAS  PROFILE-2025-images-17.jpg',
-  gallery4: '/images/DAS  PROFILE-2025-images-7.jpg',
+  gallery4: '/images/DAS  PROFILE-2025-images-8.jpg',
 };
 
 // Navigation links
