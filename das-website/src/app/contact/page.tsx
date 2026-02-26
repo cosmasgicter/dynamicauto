@@ -42,7 +42,7 @@ export default function ContactPage() {
             Call Us
           </a>
           <a
-            href="mailto:info@dynamicsolutionszambia.com"
+            href="mailto:dynamic@dynamicsolutionszambia.com"
             className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-das-navy px-4 py-3 font-semibold text-white transition-colors hover:bg-das-navy/90"
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

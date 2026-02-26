@@ -32,10 +32,10 @@ export default function ContactInfo() {
           <div>
             <p className="text-sm font-semibold text-das-gray-700">Email</p>
             <a
-              href="mailto:info@dynamicsolutionszambia.com"
+              href="mailto:dynamic@dynamicsolutionszambia.com"
               className="text-das-navy font-medium transition-colors hover:text-das-accent"
             >
-              info@dynamicsolutionszambia.com
+              dynamic@dynamicsolutionszambia.com
             </a>
           </div>
         </div>

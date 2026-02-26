@@ -22,7 +22,7 @@ describe('generateLocalBusinessSchema', () => {
 
   it('includes contact details', () => {
     expect(schema.telephone).toBe('+260977123456');
-    expect(schema.email).toBe('info@dynamicsolutionszambia.com');
+    expect(schema.email).toBe('dynamic@dynamicsolutionszambia.com');
   });
 
   it('includes PostalAddress with Zambian details', () => {

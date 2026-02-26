@@ -4,7 +4,7 @@ import ImageWithFallback from "@/components/ui/ImageWithFallback";
 
 const CONTACT_INFO = {
   phone: "+260 977 123 456",
-  email: "info@dynamicsolutionszambia.com",
+  email: "dynamic@dynamicsolutionszambia.com",
   address: "Plot 1234, Great East Road, Lusaka, Zambia",
   hours: [
     "Mon-Fri: 7:30 AM - 5:00 PM",

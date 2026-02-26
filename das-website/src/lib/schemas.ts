@@ -6,7 +6,7 @@ export function generateLocalBusinessSchema() {
     description:
       '75+ years of cumulative automotive expertise providing mechanical repairs, auto electrical, diagnostics, air conditioning, fleet management, vehicle servicing, and brake systems.',
     telephone: '+260977123456',
-    email: 'info@dynamicsolutionszambia.com',
+    email: 'dynamic@dynamicsolutionszambia.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Plot 1234, Great East Road',
