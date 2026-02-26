@@ -18,7 +18,7 @@ async function main() {
 
   try {
     const info = await transporter.sendMail({
-      from: `"DAS Website" <${process.env.ZOHO_EMAIL}>`,
+      from: `"Dynamic Automotive Solutions" <${process.env.ZOHO_EMAIL}>`,
       to: process.env.CONTACT_RECIPIENT || process.env.ZOHO_EMAIL,
       subject: 'Test Email from DAS Website',
       html: `
