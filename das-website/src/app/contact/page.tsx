@@ -33,7 +33,7 @@ export default function ContactPage() {
       <section className="bg-das-accent/5 px-4 py-4 tablet:hidden">
         <div className="flex gap-3">
           <a
-            href="tel:+260977123456"
+            href="tel:+260979449309"
             className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-das-accent px-4 py-3 font-semibold text-white transition-colors hover:bg-das-accent-dark"
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
